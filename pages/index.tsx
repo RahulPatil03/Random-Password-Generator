@@ -42,7 +42,7 @@ export default function Home() {
       <FormControlLabel control={<Checkbox />} label='0-9' name='option0' onChange={changeOptions} />
       <FormControlLabel control={<Checkbox />} label='A-Z' name='option1' onChange={changeOptions} />
       <FormControlLabel control={<Checkbox />} label='a-z' name='option2' onChange={changeOptions} />
-      <TextField type='number' inputProps={{ min: 2 }} onChange={changeLength} />
+      <TextField type='number' inputProps={{ min: 2 }} onChange={changeLength} label='Password Length'/>
       <Button variant='outlined' disabled={!ready} onClick={generatePassword} sx={{ ml: 1 }}>Generate Password</Button>
     </Toolbar>
     <Typography variant='h1' component='p' textAlign='center' sx={{ wordBreak: 'break-all' }}>{password}</Typography>
