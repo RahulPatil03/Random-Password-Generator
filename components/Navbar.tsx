@@ -6,7 +6,7 @@ export default function Navbar() {
     return <>
         <AppBar>
             <Toolbar>
-                <Typography>Random Password Generator</Typography>
+                <Typography variant='h5'>Random Password Generator</Typography>
             </Toolbar>
         </AppBar>
         <Toolbar />

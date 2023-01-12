@@ -1,5 +1,4 @@
-import { FormControlLabel, Typography } from '@mui/material';
-import Box from '@mui/material/Box';
+import { FormControlLabel, Toolbar, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
@@ -39,13 +38,13 @@ export default function Home() {
     <Head>
       <title>Random Password Generator</title>
     </Head>
-    <Box textAlign='center' p={1}>
-      <FormControlLabel control={<Checkbox />} label="0-9" name='option0' onChange={changeOptions} />
-      <FormControlLabel control={<Checkbox />} label="A-Z" name='option1' onChange={changeOptions} />
-      <FormControlLabel control={<Checkbox />} label="a-z" name='option2' onChange={changeOptions} />
+    <Toolbar sx={{ justifyContent: 'center' }}>
+      <FormControlLabel control={<Checkbox />} label='0-9' name='option0' onChange={changeOptions} />
+      <FormControlLabel control={<Checkbox />} label='A-Z' name='option1' onChange={changeOptions} />
+      <FormControlLabel control={<Checkbox />} label='a-z' name='option2' onChange={changeOptions} />
       <TextField type='number' inputProps={{ min: 2 }} onChange={changeLength} />
-      <Button variant="outlined" disabled={!ready} onClick={generatePassword} sx={{ ml: 1 }}>Generate Password</Button>
-    </Box>
+      <Button variant='outlined' disabled={!ready} onClick={generatePassword} sx={{ ml: 1 }}>Generate Password</Button>
+    </Toolbar>
     <Typography variant='h1' component='p' textAlign='center' sx={{ wordBreak: 'break-all' }}>{password}</Typography>
   </>
 }
